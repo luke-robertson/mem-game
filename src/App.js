@@ -23,6 +23,7 @@ const App = () => {
   const updateState = (index, id) => {
     switch (true) {
       // if two cards open, reset and open (only happens due to animation delay)
+      // cant make this default case as will match cards if one of the selected maches new one
       case !!(open[0].id && open[1].id):
         clearTimeout(timer.current)
         setOpen([{ index, id }, blankCard])
