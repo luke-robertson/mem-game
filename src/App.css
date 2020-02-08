@@ -1,0 +1,70 @@
+html,
+body {
+  min-height: 100%;
+  background: #0e2e5a4d;
+  color: white;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height:  100vh;
+}
+
+.game__container {
+  max-width: 560px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card__container {
+  background-color: transparent;
+  width: 100px;
+  height: 150px;
+  border-radius: 4px;
+  margin: 5px;
+  perspective: 1000px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card__front {
+  background: url('./bg.png');
+  color: black;
+}
+
+.card__back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card__open {
+  transform: rotateY(180deg);
+}
+
+.reset__link {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+}
